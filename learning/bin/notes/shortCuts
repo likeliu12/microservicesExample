@@ -1,0 +1,16 @@
+Control + Shift + O: Import
+Control + D: Delete Line
+Control + H: Search Your Entire Project
+Control + F11: Run
+
+Alt + Shift + R: Rename
+CTRL + SHIFT + L: To open list of all shortcuts
+CTRL+SHIFT+C for comment selected lines
+
+ CTRL+SHIFT+T : open fast type browser
+ CTRL+SHIFT+R : open fast file browser
+ CTRL-O : fast outline browser
+ CTRL-E : open a fast list of editor tabs
+ ALT-Up/ALT-Down : move the current line (or lines selected) in the editor up or down 
+ F3 takes you to the declaration of a function or variable
+ 
