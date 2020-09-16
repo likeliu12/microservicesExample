@@ -22,7 +22,7 @@ public class TryCF {
 		return 1;
 	}
 	
-	public static void main(String [] args) {
+	public static void main(String [] args) throws Exception {
 		TryCF t = new TryCF();
 		
 		int ret = 0;
@@ -31,9 +31,12 @@ public class TryCF {
 			ret = t.testOne();
 		} catch (Exception e) {
 			e.printStackTrace();
-			
+			t.handleException("more infor", e);
 		}
-		
 		System.out.println("" + ret);
+	}
+
+	private void handleException(String str, Exception e) throws Exception {
+		throw new Exception("funny", new Exception(str, e));
 	}
 }

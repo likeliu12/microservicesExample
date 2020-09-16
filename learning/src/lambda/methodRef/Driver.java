@@ -19,11 +19,20 @@ public class Driver {
 		//obj::instanceMethod
 		result = Utils.transform(tString, tString::concat);
 		
+		StringFunction stringFunction = new StringFunction() {
+			
+			@Override
+			public String applyFunction(String s) {
+				
+				return s.toUpperCase();
+			}
+		};
 		//class instance method
 		//(obj, args) -> obj.instanceMethod(args)
 		//ObjectType::instanceMethod
-		result = Utils.transform(tString, obj -> obj.toUpperCase());
-		result = Utils.transform(tString, String::toUpperCase);	
+		result = Utils.transform(tString, stringFunction); // without parm
+		result = Utils.transform(tString, obj -> obj.toUpperCase()); // without parm
+		result = Utils.transform(tString, String::toUpperCase);	 //without parm
 		
 		String[] stringArray = { "Barbara", "James", "Mary", "John",
 			    "Patricia", "Robert", "Michael", "Linda" };

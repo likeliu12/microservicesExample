@@ -32,6 +32,8 @@ public enum Week {
 		System.out.println("*********");
 		System.out.println(Week.SUNDAY);
 		System.out.println(Week.SUNDAY.name());
+		System.out.println(Week.SUNDAY.valueOf("MONDAY"));
+
 		System.out.println(Week.SUNDAY.ordinal());
 
 		System.out.println(Week.valueOf("SUNDAY") + "        " + Week.SUNDAY.getPrice());

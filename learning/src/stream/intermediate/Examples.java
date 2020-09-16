@@ -1,6 +1,7 @@
 package stream.intermediate;
 
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -36,12 +37,12 @@ public class Examples {
 	}
 
 	private static void mapTest() {
-		List evens = Arrays.asList(2, 4, 6); 
-		List odds = Arrays.asList(3, 5, 7);
-		List primes = Arrays.asList(2, 3, 5, 7, 11); 
+		List<Integer> evens = Arrays.asList(2, 4, 6); 
+		List<Integer>  odds = Arrays.asList(3, 5, 7);
+		List<Integer>  primes = Arrays.asList(2, 3, 5, 7, 11); 
 		
-		List numbers = Stream.of(evens, odds, primes) 
-				.flatMap(list -> list.stream()) 
+		List<Integer> numbers = Stream.of(evens, odds, primes) 
+				.flatMap(list -> list.stream())
 				.distinct()
 				.collect(Collectors.toList()); 
 		System.out.println("flattend list: " + numbers);

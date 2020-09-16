@@ -31,7 +31,7 @@ public class OverloadingTesting {
 		return 4;
 	}
 	
-	static int m1(Long l) {
+	public static int m1(Long l) {
 		return 5;
 	}
 	
